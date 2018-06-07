@@ -9,15 +9,16 @@ function stripOnly(textEditor: TextEditor, edit: TextEditorEdit, args: any[]) {
   const documentContents = textDocument.getText();
 
   textEditor.edit((editBuilder: TextEditorEdit) => {
-    let regEx = /\.only/ig;
+    let regEx = /(it|describe).only\(/ig;
     let match = regEx.exec(documentContents);
     while (match) {
       const [substring] = match;
       const { index } = match;
+      const newValue = substring.replace('.only', '');
       const startPos = textEditor.document.positionAt(index);
       const endPos = textEditor.document.positionAt(index + substring.length);
       const range = new Range(startPos, endPos);
-      editBuilder.delete(range);
+      editBuilder.replace(range, newValue);
       match = regEx.exec(documentContents);
     }
   });
