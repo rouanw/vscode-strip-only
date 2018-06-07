@@ -53,4 +53,24 @@ describe('Strip .only', function () {
       assert.equal(true, updatedText.includes('roy.describe(\'paper boy\');'));
     }
   });
+
+  it('should support the mocha TDD interface', async function () {
+    if (!editor) {
+      assert.ok(editor);
+    } else {
+      await editor.edit((builder) => builder.insert(new vscode.Position(0,0), `
+        suite.only('my functionality', () => {
+            test.only('does useful things', () => {});
+            it('csny', () => {
+              csny.suiteJudyBlueEyes();
+            });
+          });
+        `));
+      await vscode.commands.executeCommand('extension.stripOnly');
+      const updatedText = editor.document.getText();
+      assert.equal(false, updatedText.includes('.only('));
+      assert.equal(false, updatedText.includes('suite(my functionality'));
+      assert.equal(true, updatedText.includes('csny.suiteJudyBlueEyes'));
+    }
+  });
 });

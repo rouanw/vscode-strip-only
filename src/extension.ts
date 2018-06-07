@@ -9,7 +9,7 @@ function stripOnly(textEditor: TextEditor, edit: TextEditorEdit, args: any[]) {
   const documentContents = textDocument.getText();
 
   textEditor.edit((editBuilder: TextEditorEdit) => {
-    let regEx = /(it|describe).only\(/ig;
+    let regEx = /(it|describe|test|suite).only\(/ig;
     let match = regEx.exec(documentContents);
     while (match) {
       const [substring] = match;
