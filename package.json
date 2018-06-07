@@ -2,14 +2,14 @@
   "name": "strip-only",
   "displayName": "Strip .only",
   "description": "Strip .only from your test file",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "rouanw",
   "repository": {
     "type": "git",
     "url": "https://github.com/rouanw/vscode-strip-only"
   },
   "engines": {
-    "vscode": "^1.24.0"
+    "vscode": "^1.10.0"
   },
   "categories": [
     "Other"
