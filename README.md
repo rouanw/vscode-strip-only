@@ -28,6 +28,10 @@ You can add a keyboard shortcut, in [`keybindings.json`](https://code.visualstud
 ]
 ```
 
+## Find it on the Visual Studio Marketplace
+
+https://marketplace.visualstudio.com/items?itemName=rouanw.strip-only
+
 ## Licence
 
 MIT
