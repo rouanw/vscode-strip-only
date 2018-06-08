@@ -6,6 +6,8 @@ Ready to commit your code?
 
 Run it and it will change all instances of `it.only` and `describe.only` to `it` and `describe` respectively. (It also works for mocha's `TDD` interface methods - `suite` and `test`.)
 
+![strip-only](https://user-images.githubusercontent.com/2362668/41152450-e81811f8-6b13-11e8-893d-e22f9321f724.gif)
+
 ## Get started
 
 Install the extension, [via the UI](https://code.visualstudio.com/docs/editor/extension-gallery) or:
