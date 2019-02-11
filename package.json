@@ -2,7 +2,7 @@
   "name": "strip-only",
   "displayName": "Strip .only",
   "description": "Strip .only from your test file",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "publisher": "rouanw",
   "repository": {
     "type": "git",
